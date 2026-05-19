@@ -25,3 +25,11 @@ INSERT INTO Pokemons (nombre, capturado, tipoPokemon, numeroPokemon, fechaCaptur
 ```
 
 ![](2.png)
+
+## Apartado 3
+```bash
+SELECT * FROM Pokemons ORDER BY fechaCaptura DESC;
+
+```
+
+![](3.png)
