@@ -81,3 +81,14 @@ HAVING COUNT(m.id) > 1;
 ```
 
 ![](6.png)
+
+## Apartado 7
+```bash
+UPDATE res_partner
+SET email = REPLACE(email, '@bilbao.example.com', '@bilbao.euskadi.eus')
+WHERE email LIKE '%@bilbao.example.com';
+
+```
+
+![](7.png)
+
