@@ -48,3 +48,19 @@ ORDER BY c.name ASC;
 ```
 
 ![](4.png)
+
+## Apartado 5
+```bash
+SELECT 
+    p.name AS "Nombre de la empresa",
+    m.name AS "Número de factura",
+    m.date AS "Fecha de la factura",
+    m.amount_untaxed AS "Total factura SIN impuestos"
+FROM account_move m
+JOIN res_partner p ON m.partner_id = p.id
+WHERE m.move_type = 'out_refund'
+ORDER BY m.date DESC;
+
+```
+
+![](5.png)
