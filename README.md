@@ -33,3 +33,18 @@ SELECT * FROM Pokemons ORDER BY fechaCaptura DESC;
 ```
 
 ![](3.png)
+
+## Apartado 4
+```bash
+SELECT 
+    p.name AS "Nombre Contacto", 
+    c.name AS "Nombre Comercial Empresa"
+FROM res_partner p
+LEFT JOIN res_partner c ON p.parent_id = c.id
+WHERE p.is_company = FALSE 
+  AND (p.city IS NULL OR p.city <> 'Tracy')
+ORDER BY c.name ASC;
+
+```
+
+![](4.png)
