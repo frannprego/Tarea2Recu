@@ -64,3 +64,20 @@ ORDER BY m.date DESC;
 ```
 
 ![](5.png)
+
+## Apartado 6
+```bash
+SELECT 
+    p.name AS "Nombre de la empresa",
+    COUNT(m.id) AS "Número de facturas",
+    SUM(m.amount_untaxed) AS "Total facturado SIN IMPUESTOS"
+FROM account_move m
+JOIN res_partner p ON m.partner_id = p.id
+WHERE m.move_type = 'in_invoice' 
+  AND m.state = 'posted'
+GROUP BY p.name
+HAVING COUNT(m.id) > 1;
+
+```
+
+![](6.png)
