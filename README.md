@@ -92,3 +92,14 @@ WHERE email LIKE '%@bilbao.example.com';
 
 ![](7.png)
 
+## Apartado 8
+```bash
+DELETE FROM res_partner
+WHERE parent_id = (
+    SELECT id FROM res_partner WHERE name = 'Wood Corner' AND is_company = TRUE LIMIT 1
+);
+
+```
+
+![](8.png)
+
